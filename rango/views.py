@@ -26,9 +26,15 @@ def rangoAbout(request):
     return HttpResponse("Rango says: \"Here is the About page\"")
 
 
+def rangoLinks(request):
+    return HttpResponse("Some useful links:")
+
+
+def rangoFiles(request):
+    return HttpResponse("Files you can download and use")
+
+
 def rangoContact(request):
     return HttpResponse("Here's how to contact us:")
 
 
-def rangoLinks(request):
-    return HttpResponse("Some useful links:")
