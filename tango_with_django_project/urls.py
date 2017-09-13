@@ -24,5 +24,6 @@ urlpatterns = [
     # above maps any URLs starting
     # with rango/ to be handled by
     # the rango application
+    url(r'^markdownx/', include('markdownx.urls')),
     url(r'^admin/', admin.site.urls),
 ]
