@@ -30,8 +30,8 @@ def rangoLinks(request):
     return HttpResponse("Some useful links:")
 
 
-# def rangoFiles(request):
-#     return HttpResponse("Files you can download and use")
+def rangoFiles(request):
+    return HttpResponse("Files you can download and use")
 
 
 def rangoContact(request):

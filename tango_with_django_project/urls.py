@@ -21,7 +21,7 @@ from rango import views
 urlpatterns = [
     url(r'^$', views.rangoIndex, name='rangoIndex'),
     url(r'^$', views.rangoAbout, name='rangoAbout'),
- #   url(r'^$', views.rangoFiles, name='rangoFiles'),
+    url(r'^$', views.rangoFiles, name='rangoFiles'),
     url(r'^$', views.rangoContact, name='rangoContact'),
     url(r'^rango/', include('rango.urls')),
     # above maps any URLs starting
