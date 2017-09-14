@@ -118,11 +118,17 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
+# See <https://docs.djangoproject.com/en/1.11/howto/static-files/>
+
+STATICFILES_DIRS = [STATIC_DIR, ]
+# Server-side location directive
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [STATIC_DIR]
+# Refers to the location on your computer where static files are stored.
 
+'''
+To display use of Dynamic Paths -- can be deleted
 print(__file__)
 print(os.path.dirname(__file__))
 print(os.path.dirname(os.path.dirname(__file__)))
+'''
