@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>Contact Rango</title>
+	</head>
+	<body>
+        <p>
+            <img src="{% static "images/three-westies.jpg" %}"
+                 alt="The Three Westies" />
+		</p>
+		<h1>Contact Rango</h1>
+		<p>
+			Here's how you contact us:<br />
+			<strong><em>{{ boldmessage }}</em></strong><br />
+		</p>
+        <img src="{{ MEDIA_URL }}janis-westie.jpg" />
+		<p>
+            <a href="/rango/">Home</a><br />
+            <a href="/rango/about">About</a><br />
+            <a href="/rango/links">Links</a><br />
+            <a href="/rango/files">Files</a><br />
+        </p>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>Rango</title>
+	</head>
+	<body>
+        <p>
+            <img src="{% static "images/three-westies.jpg" %}"
+                 alt="The Three Westies" />
+		</p>
+		<h1>Downloadable files</h1>
+		<p>
+			Click on a file to download<br />
+			<strong><em>{{ boldmessage }}</em></strong><br />
+		</p>
+        <img src="{{ MEDIA_URL }}janis-westie.jpg" />
+		<p>
+            <a href="/rango/">Home</a><br />
+			<a href="/rango/about">About</a><br />
+            <a href="/rango/links">Links</a><br />
+            <a href="/rango/contact">Contact</a>
+        </p>
+	</body>
+</html>
