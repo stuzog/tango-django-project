@@ -4,21 +4,21 @@
 
 <html>
 	<head>
-		<title>Rango</title>
+		<title>About Rango</title>
 	</head>
 	<body>
         <p>
-            <img src="{% static "images/three-westies.jpg" %}"
-                 alt="The Three Westies" />
+            <a href="/rango/"><img src="{% static "images/three-westies.jpg" %}"
+                 alt="The Three Westies" /></a>
 		</p>
-		<h1>Rango says&hellip;</h1>
+		<h1>About Rango</h1>
 		<p>
 			Hey there, Partner! Now hear this!&hellip;<br />
 			<strong><em>{{ boldmessage }}</em></strong><br />
 		</p>
         <img src="{{ MEDIA_URL }}janis-westie.jpg" />
 		<p>
-			<a href="/rango/about">About</a><br />
+			<a href="/rango/">Home</a><br />
             <a href="/rango/links">Links</a><br />
             <a href="/rango/files">Files</a><br />
             <a href="/rango/contact">Contact</a>
