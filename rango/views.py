@@ -16,12 +16,6 @@ def rangoIndex(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 
-'''
-def rangoIndex(request):
-    return HttpResponse("Rango says: \"Hey there partner!\"")
-'''
-
-
 def rangoAbout(request):
 
    # return HttpResponse("Rango says: \"Here is the About page\"")

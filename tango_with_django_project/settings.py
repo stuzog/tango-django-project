@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'djangocms_admin_style',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +44,7 @@ INSTALLED_APPS = [
     'rango',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,9 +135,12 @@ MEDIA_ROOT = MEDIA_DIR
 
 MEDIA_URL = '/media/'
 
-'''
-To display use of Dynamic Paths -- can be deleted
+# To display use of Dynamic Paths -- can be deleted
 print(__file__)
 print(os.path.dirname(__file__))
 print(os.path.dirname(os.path.dirname(__file__)))
-'''
+print(os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))
+print(os.path.dirname((os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))))
+print(os.path.abspath(__file__))
+print(os.path.dirname(os.path.abspath(__file__)))
+print(os.path.dirname(os.path.dirname((os.path.abspath(__file__)))))
