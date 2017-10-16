@@ -4,8 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66bcbaf4-67a7-4c44-a91d-069ab2cffff3" name="Default" comment="updated django-cms to 1.11.6">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+    <list default="true" id="66bcbaf4-67a7-4c44-a91d-069ab2cffff3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -530,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508183463416</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="updated django-cms + migrated + new requirements.txt">
+      <created>1508184058129</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1508184058129</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -634,7 +640,8 @@
     <MESSAGE value="made Three Westies image link to Home" />
     <MESSAGE value="updated to django-cms 1.11.6 migrated changes" />
     <MESSAGE value="Revert &quot;made Three Westies image link to Home&quot;&#10;&#10;This reverts commit f2318d2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;made Three Westies image link to Home&quot;&#10;&#10;This reverts commit f2318d2" />
+    <MESSAGE value="updated django-cms + migrated + new requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated django-cms + migrated + new requirements.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
