@@ -25,21 +25,21 @@ def rangoAbout(request):
 
 
 def rangoLinks(request):
-#    return HttpResponse("Some useful links:")
+    # return HttpResponse("Some useful links:")
     context_dict = {'boldmessage': "Here are some useful links"}
 
     return render(request, 'rango/links.html', context=context_dict)
 
 
 def rangoFiles(request):
-#    return HttpResponse("Files you can download and use")
+    # return HttpResponse("Files you can download and use")
     context_dict = {'boldmessage': "Here are some useful files"}
 
     return render(request, 'rango/files.html', context=context_dict)
 
 
 def rangoContact(request):
-#    return HttpResponse("Here's how to contact us:")
+    # return HttpResponse("Here's how to contact us:")
     context_dict = {'boldmessage': "Here's how to contact us"}
 
     return render(request, 'rango/contact.html', context=context_dict)

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
 
@@ -25,5 +26,6 @@ class Page(models.Model):
         return self.title
 
     def __unicode__(self):  # For Python 2
-        return self.name
+        return self.title
+
 

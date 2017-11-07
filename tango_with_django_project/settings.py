@@ -16,7 +16,7 @@ import os
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
-STATIC_DIR = os.path.join(BASE_DIR, 'tango_with_django_project/static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
@@ -135,11 +135,11 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 # To display use of Dynamic Paths -- can be deleted
-print(__file__)
-print(os.path.dirname(__file__))
-print(os.path.dirname(os.path.dirname(__file__)))
-print(os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))
-print(os.path.dirname((os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))))
-print(os.path.abspath(__file__))
-print(os.path.dirname(os.path.abspath(__file__)))
-print(os.path.dirname(os.path.dirname((os.path.abspath(__file__)))))
+# print(__file__)
+# print(os.path.dirname(__file__))
+# print(os.path.dirname(os.path.dirname(__file__)))
+# print(os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))
+# print(os.path.dirname((os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))))
+# print(os.path.abspath(__file__))
+# print(os.path.dirname(os.path.abspath(__file__)))
+# print(os.path.dirname(os.path.dirname((os.path.abspath(__file__)))))
