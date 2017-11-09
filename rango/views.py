@@ -3,8 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def rangoIndex(request):
-
+def rangoindex(request):
     # Construct a dictionary to pass to the template engine as its context
     # Note that the key boldmessage is the same as {{ boldmessage }}
     # in the template!
@@ -16,32 +15,29 @@ def rangoIndex(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 
-def rangoAbout(request):
-
-   # return HttpResponse("Rango says: \"Here is the About page\"")
+def rangoabout(request):
+    # return HttpResponse("Rango says: \"Here is the About page\"")
     context_dict = {'boldmessage': "About Rango we know very little."}
 
     return render(request, 'rango/about.html', context=context_dict)
 
 
-def rangoLinks(request):
+def rangolinks(request):
     # return HttpResponse("Some useful links:")
     context_dict = {'boldmessage': "Here are some useful links"}
 
     return render(request, 'rango/links.html', context=context_dict)
 
 
-def rangoFiles(request):
+def rangofiles(request):
     # return HttpResponse("Files you can download and use")
     context_dict = {'boldmessage': "Here are some useful files"}
 
     return render(request, 'rango/files.html', context=context_dict)
 
 
-def rangoContact(request):
+def rangocontact(request):
     # return HttpResponse("Here's how to contact us:")
     context_dict = {'boldmessage': "Here's how to contact us"}
 
     return render(request, 'rango/contact.html', context=context_dict)
-
-
