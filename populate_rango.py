@@ -40,9 +40,9 @@ def populate():
         {"title": "VicPiMakers Meetup",
          "url": "https://www.meetup.com/Victoria-Raspberry-PiMakers-And-Others/"}]
 
-    cats = {"Python": {"pages": python_pages},
-            "Django": {"pages": django_pages},
-            "Other Frameworks": {"pages": other_pages}}
+    cats = {"Python": {"pages": python_pages, "views": 128, "likes": 64},
+            "Django": {"pages": django_pages, "views": 64, "likes": 32},
+            "Other Frameworks": {"pages": other_pages, "views": 32, "likes": 16}}
 
     # If you want to add more categories or pages,
     # add them to the dictionaries above.
@@ -64,16 +64,21 @@ def populate():
                 print("- {0} - {1}".format(str(c), str(p)))
 
 
-def add_page(cat, title, url, views=0):
-    p = Page.objects.get_or_create(category=cat, title=title)[0]
+def add_page(cat, title, url, views=0, likes=0):
+    p = Page.objects.get_or_create(category=cat, title=title, url=url, views=views, likes=likes)[0]
+    p.cat = cat
+    p.title = title
     p.url = url
     p.views = views
+    p.likes = likes
     p.save()
     return p
 
 
-def add_cat(name):
-    c = Category.objects.get_or_create(name=name)[0]
+def add_cat(name, views=0, likes=0):
+    c = Category.objects.get_or_create(name=name, views=views, likes=likes)[0]
+    c.views = views
+    c.likes = likes
     c.save()
     return c
 
