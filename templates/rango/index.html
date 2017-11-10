@@ -1,4 +1,53 @@
 <!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>Rango</title>
+</head>
+
+<body>
+    <p>
+        <img src="{% static "images/three-westies.jpg" %}"
+            alt="The Three Westies" />
+    </p>
+
+    <h1>Welcome to Rango</h1>
+    <p>
+        Hey there, Partner! Now hear this!<br />
+        <strong><em>{{ boldmessage }}</em></strong>
+    </p>
+
+    <div>
+    <h2>Categories</h2>
+
+    {% if categories %}
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.name }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <strong>There are no categories present.</strong>
+    {% endif %}
+    </div>
+
+    <img src="{{ MEDIA_URL }}janis-westie.jpg" />
+
+    <div>
+        <h2>Navigation</h2>
+
+		<a href="/rango/about">About</a><br />
+        <a href="/rango/links">Links</a><br />
+        <a href="/rango/files">Files</a><br />
+        <a href="/rango/contact">Contact</a>
+    </div>
+</body>
+</html>
+
+<!--
+Excerpt From: Leif Azzopardi and David Maxwell. “How to Tango with Django 1.9.” iBooks.
+
+<!DOCTYPE html>
 
 {% load staticfiles %}
 
@@ -25,3 +74,4 @@
         </p>
 	</body>
 </html>
+-->
