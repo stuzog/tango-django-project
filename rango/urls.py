@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^contact/', views.rangocontact, name='rangocontact'),
     url(r'^files/', views.rangofiles, name='rangofiles'),
     url(r'^links/', views.rangolinks, name='rangolinks'),
+    url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.show_category, name='show_category'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
