@@ -9,6 +9,10 @@ django.setup()
 from rango.models import Category, Page
 
 
+def add_cats(c, param, param1, param2):
+    pass
+
+
 def populate():
     # First, we will create a list of dictionaries containing the pages
     # we want to add in each category.
@@ -40,9 +44,14 @@ def populate():
         {"title": "VicPiMakers Meetup",
          "url": "https://www.meetup.com/Victoria-Raspberry-PiMakers-And-Others/"}]
 
-    cats = {"Python": {"pages": python_pages, "views": 128, "likes": 64},
-            "Django": {"pages": django_pages, "views": 64, "likes": 32},
-            "Other Frameworks": {"pages": other_pages, "views": 32, "likes": 16}}
+    westie_pages = [
+        {"title": "VanIsle Westies",
+         "url": "https://meetup.com/vanislewesties/"}]
+
+    cats = {"Python": {"name": python_pages, "views": 128, "likes": 64},
+            "Django": {"name": django_pages, "views": 64, "likes": 32},
+            "Other Frameworks": {"name": other_pages, "views": 32, "likes": 16},
+            "Westies": {"name": westie_pages, "views": 21, "likes": 15}}
 
     # If you want to add more categories or pages,
     # add them to the dictionaries above.
@@ -55,7 +64,7 @@ def populate():
 
     for cat, cat_data in cats.items():
         c = add_cat(cat)
-        for p in cat_data["pages"]:
+        for p in cat_data["name"]:
             add_page(c, p["title"], p["url"])
 
         # Print out the categories we have added.
@@ -64,7 +73,11 @@ def populate():
                 print("- {0} - {1}".format(str(c), str(p)))
 
 
-def add_page(cat, title, url, views=0, likes=0):
+def add_page(cat: object, title: object, url: object, views: object = 0, likes: object = 0) -> object:
+    """
+
+    :rtype: object
+    """
     p = Page.objects.get_or_create(category=cat, title=title, url=url, views=views, likes=likes)[0]
     p.cat = cat
     p.title = title
@@ -75,7 +88,7 @@ def add_page(cat, title, url, views=0, likes=0):
     return p
 
 
-def add_cat(name, views=0, likes=0):
+def add_cat(name: object, views: object = 0, likes: object = 0) -> object:
     c = Category.objects.get_or_create(name=name, views=views, likes=likes)[0]
     c.views = views
     c.likes = likes
