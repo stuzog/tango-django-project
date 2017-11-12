@@ -73,11 +73,7 @@ def populate():
                 print("- {0} - {1}".format(str(c), str(p)))
 
 
-def add_page(cat: object, title: object, url: object, views: object = 0, likes: object = 0) -> object:
-    """
-
-    :rtype: object
-    """
+def add_page(cat, title, url, views = 0, likes = 0):
     p = Page.objects.get_or_create(category=cat, title=title, url=url, views=views, likes=likes)[0]
     p.cat = cat
     p.title = title
@@ -88,7 +84,7 @@ def add_page(cat: object, title: object, url: object, views: object = 0, likes: 
     return p
 
 
-def add_cat(name: object, views: object = 0, likes: object = 0) -> object:
+def add_cat(name, views = 0, likes = 0):
     c = Category.objects.get_or_create(name=name, views=views, likes=likes)[0]
     c.views = views
     c.likes = likes
