@@ -134,12 +134,3 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-# To display use of Dynamic Paths -- can be deleted
-# print(__file__)
-# print(os.path.dirname(__file__))
-# print(os.path.dirname(os.path.dirname(__file__)))
-# print(os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))
-# print(os.path.dirname((os.path.dirname(os.path.dirname((os.path.dirname(__file__)))))))
-# print(os.path.abspath(__file__))
-# print(os.path.dirname(os.path.abspath(__file__)))
-# print(os.path.dirname(os.path.dirname((os.path.abspath(__file__)))))

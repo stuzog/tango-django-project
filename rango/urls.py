@@ -4,10 +4,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', views.rangoindex, name='rangoindex'),
-    url(r'^about/', views.rangoabout, name='rangoabout'),
-    url(r'^contact/', views.rangocontact, name='rangocontact'),
-    url(r'^files/', views.rangofiles, name='rangofiles'),
-    url(r'^links/', views.rangolinks, name='rangolinks'),
+    url(r'^$', views.index, name='index'),
+    url(r'^about/', views.about, name='about'),
+    url(r'^contact/', views.contact, name='contact'),
+    url(r'^files/', views.files, name='files'),
+    url(r'^links/', views.links, name='links'),
+    url(r'^add_category/$', views.add_category, name='add_category'),
     url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.show_category, name='show_category'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
